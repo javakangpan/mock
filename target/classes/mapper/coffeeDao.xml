@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mock.dao.CoffeeDao">
+    <select id="selectAll" resultType="mock.model.Coffee">
+        select
+        t.id,
+        t.name,
+        t.price,
+        t.state,
+        t.coffeeDesc,
+        t.create_time as createTime,
+        t.update_time as updateTime,
+        t.createdBy,
+        t.updatedBy
+        from t_coffee t
+        order by t.id asc
+    </select>
+</mapper>
